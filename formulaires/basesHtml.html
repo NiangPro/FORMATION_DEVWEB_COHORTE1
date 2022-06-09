@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bases html</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Media</th>
+                <th>Formulaire</th>
+                <th>Liste</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <video src="../videos/rl.mp4" controls width="200" height="150"></video>
+                </td>
+                
+                <td rowspan="4">
+                    <h1>Sondage musical</h1>
+                    <hr>
+                    <form action="">
+                        <label for="">Nom:</label>
+                        <input type="text">
+                        <hr>
+                        <label for="">Courriel:</label>
+                        <input type="email">
+                        <fieldset>
+                            <legend>Choisissez votre type de musique</legend>
+                            <input type="checkbox" name="musique"> pop
+                            <input type="checkbox" name="musique"> classique
+                            <input type="checkbox" name="musique"> Rock
+                            <input type="checkbox" name="musique"> Folk
+                            <input type="checkbox" name="musique"> Rap 
+                            <input type="text" placeholder="autre">
+                        </fieldset>
+                        <fieldset>
+                            <legend>Indiquez a quelle frequence vous achetez de la musique</legend>
+                            <input type="radio" name="frequence">A chaque semaine <br>
+                            <input type="radio" name="frequence">A chaque mois <br>
+                            <input type="radio" name="frequence">A chaque annee <br>
+                            <input type="radio" name="frequence">Jamais
+                        </fieldset>
+                        <hr>
+                        <h3>Indiquez tous les endroits ou vous ecoutez de la musique</h3>
+                        <select name="" id="" multiple>
+                            <option value="">Maison</option>
+                            <option value="">AUTO</option>
+                            <option value="">Metro</option>
+                            <option value="">partout</option>
+                        </select>
+                        <hr>
+                        <h3>Nommez votre artiste prefere</h3>
+                        <input type="text" value="j">
+                        <hr>
+                        <h3>Quel role joue la musique dans votre vie?</h3>
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                        <hr>
+                        <button type="submit">J'envoir</button><button type="reset">Je recommence</button>
+                    </form>
+                </td>
+                <td rowspan="2">
+                    <fieldset>
+                        <legend>liste</legend>
+                        <h6>Categorie</h6>
+                        <ul type="square">
+                            <li>VETEMENT</li>
+                            <ol type="10">
+                                <li>homme</li>
+                                <ol type="i">
+                                    <li>Mineure</li>
+                                    <ol type="a">
+                                        <li>garcon</li>
+                                        <li>fille</li>
+                                    </ol>
+                                    <li>Majeur</li>
+                                    <ol type="A">
+                                        <li>garcon</li>
+                                        <li>fille</li>
+                                    </ol>
+                                </ol>
+                                <li>femme</li>
+                            </ol>
+                        </ul>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">
+                    <img src="../images/bg1.jpg" alt="" width="200" height="150">
+                    <img src="../images/bg2.jpg" alt="" width="200" height="150">
+                </td>
+                
+
+            </tr>
+            <tr>
+                <td rowspan="3">
+                    <form action="">
+                        <label for="">Civilite</label>
+                        <input type="radio">Mademoiselle 
+                        <input type="radio">Madame
+                        <input type="radio">Monsieur <br>
+                        <label for="">Nom / prenom</label>
+                        <input type="text"><br>
+                        <label for="">Adresse</label>
+                        <textarea name="" id="" cols="30" rows="2"></textarea><br>
+                        <label for="">No postal / Localite</label>
+                        <input type="text"><input type="text"><br>
+                        <label for="">Pays</label>
+                        <select name="" id="">
+                            <option value="">Tunisie</option>
+                        </select>
+                        <br>
+                        <label for="">Plateforme(s)</label>
+                        <input type="checkbox">Windows
+                        <input type="checkbox">Macintosh
+                        <input type="checkbox">UNIX <br>
+                        <label for="">Apllications (s)</label>
+                        <select name="" id="">
+                            <option value="">Bureautique</option>
+                            <option value="">Dao</option>
+                            <option value="">Statistiques</option>
+                            <option value="">SGBD</option>
+                            <option value="">Internet</option>
+                        </select>
+                        <br>
+                        <button type="submit">Soumettre formulaire</button>
+                        <button type="reset">Effacer</button>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <audio src="../sons/halaman.mp3" controls></audio>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Media</th>
+                <th>Formulaire</th>
+                <th>Liste</th>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

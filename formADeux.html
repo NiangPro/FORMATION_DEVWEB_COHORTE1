@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire dans un tableau</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td><img src="images/bg2.jpg" width="200" height="200"></td>
+            <td rowspan="3">
+                <fieldset>
+                    <legend>
+                        Formulaire
+                    </legend>
+                    <form>
+                        <label for="">Prenom</label>
+                        <input type="text" name="Prenom">
+                        <label for="">Email</label>
+                        <input type="email" name="Email"><br/><br/>
+                        <label for="">Nom</label>
+                        <input type="text" name="nom">
+                        <label for="">MdP</label>
+                        <input type="password" name="MdP"><br/><br/>
+                        <label for="">Sexe</label>
+                        <input type="radio" name="Sexe" checked>Masculin
+                        <input type="radio" name="Sexe">Feminin <br/><br/>
+                        <label for=""> Couleur</label>
+                        <input type="color" name="couleur"><br><br>
+                        <label for="">Pays:</label>
+                        <select name="" id="">  
+                            <option value="">Mali</option>
+                            <option value="">Senegal</option>
+                            <option value="">Cote d'ivoire</option>
+                            <option value="">Benin</option>
+                        </select>
+                        <br><br>
+                        <label for="">Message:</label><br>
+                        <textarea name="" id=""></textarea><br>
+                        <label for="">Numero telephone</label><br>
+                        <input type="tel" placeholder="Entrer le numero de telephone"><br><br>
+                        <label for="">Semaine:</label><br>
+                        <input type="week"><br><br>
+                        <label for="">Langues</label>
+                        <input type="checkbox" name="Langues">Arabe
+                        <input type="checkbox" name="Langues" checked>Francais
+                        <input type="checkbox" name="Langues">Anglais<br><br>
+                        <label for="">DAte de Naissance</label>
+                        <input type="DateTime-local" name="Date de Naissance"><br><br>
+                        <input type="submit" value="S'inscrire">
+                        <input type="reset" value="Annuler">
+
+                    </form>
+                </fieldset>
+            </td>
+        </tr>
+        <tr>
+            <td><video src="videos/rl.mp4" controls width="200" height="200"></video></td>
+        </tr>
+        <tr>
+            <td><audio src="sons/halaman.mp3" controls></audio></td>
+        </tr>
+    </table>
+</body>
+</html>
