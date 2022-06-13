@@ -1,0 +1,17 @@
+h1{
+
+    color: orange;
+    text-shadow: 10px 5px 15px;
+    letter-spacing: 15px;
+    text-transform:uppercase;
+}
+p{
+    column-count: 2;
+    background-color: grey;
+
+}
+
+p::first-letter{
+    font-size: 80px;
+}
+

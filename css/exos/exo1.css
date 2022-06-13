@@ -1,0 +1,53 @@
+h1{
+    color: white;
+    background: darkblue;
+    font-family: "Comic Sans MS", sans-serif;
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    /* text-transform: capitalize; */
+    cursor: crosshair;
+}
+h1::first-letter{
+    text-transform: uppercase;
+}
+
+h2{
+    color: darkblue;
+}
+
+h2::first-letter{
+    text-transform: uppercase;
+}
+
+ul{
+    list-style-type: circle;
+    color: navy;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 50px;
+}
+
+a{
+    color: red;
+}
+a:visited{
+    color: maroon;
+}
+a:hover{
+    color:green;
+}
+
+a:focus{
+    color: yellow;
+}
+
+pre{
+    color: blue;
+}
+
+table{
+    /* border:  1px solid #000; */
+    border-collapse: collapse;
+    width: 400px;
+    margin: auto;
+}
