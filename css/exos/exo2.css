@@ -34,6 +34,8 @@ form{
     background: rgb(247, 244, 244);
     padding: 10px;
     box-shadow: 10px 10px 10px 10px grey;
+    transform: translateX(-25%);
+
 }
 label, input{
     display: block;

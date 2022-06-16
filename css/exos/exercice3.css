@@ -1,0 +1,121 @@
+nav ul{
+    width: 90%;
+    border: 1px solid #000;
+    height: 50px;
+    line-height: 50px;
+}
+nav ul li{
+    list-style-type: none;
+    float: right;
+    width: 150px;
+    /* border: 1px solid #000; */
+    text-align: center;
+    margin-left: 10px;
+    border-radius: 5px;
+    background: rgb(211, 97, 209);
+    cursor: pointer;
+}
+
+ul li ul{
+    border-width: 0;
+}
+
+nav> ul> li:hover{
+    background: rgb(234, 173, 221);
+}
+
+nav ul li ul{
+    margin-left: -25px;
+    display: none;
+}
+
+nav ul li ul li{
+    margin-bottom: 10px;
+}
+
+ul li ul li:hover{
+    transform: rotate(-25deg);
+
+}
+
+nav ul li:hover ul{
+    display: block;
+}
+
+span{
+    float: left;
+}
+
+h1{
+    text-align: center;
+    width: 300px;
+    /* border: 1px ridge black; */
+    border-right: 30px double red;
+    border-left: 10px solid #000;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    margin: auto;
+    background: cyan;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 10px;
+    box-shadow: 5px 5px 10px green;
+}
+
+h1:hover{
+    width: 500px;
+    transition: 2s;
+    background: orange;
+    color: white;
+    transform: rotate(-360deg);
+}
+
+form{
+    /* border: 1px solid #000; */
+    width: 500px;
+    height: 300px;
+    margin: auto;
+    background: rgb(247,244,244);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 5px 5px 5px 5px grey;
+}
+
+label, input{
+    display: block;
+    margin: 25px;
+}
+
+label{
+    font-size: 24px;
+}
+
+input[type="email"], input[type="password"]{
+    width: 400px;
+    height: 30px;
+    border-color: red;
+    border-width: 5px;
+    border-radius: 10px;
+    outline: none;
+}
+
+input[type="submit"]{
+    border-width: 0;
+    background: green;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+}
+
+form:hover{
+    background: grey;
+    transition: 2s;
+}
+
+form:hover label{
+    color: white;
+}
+
+input[type="submit"]:hover{
+    background: cyan;
+}

@@ -1,0 +1,66 @@
+.plan{
+    width: 50%;
+    border: 1px solid #000;
+    height: 300px;
+    margin: auto;
+    background-image: url(../../images/profil.png);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    position: relative;
+    overflow-x: hidden;
+}
+.plan p{
+    width: 1000px;
+}
+.plan h1{
+    position: absolute;
+    bottom: 25px;
+    left: 50px;
+}
+ul{
+    list-style-type: none;
+    /* border: 1px solid #000; */
+    width: 90%;
+    height: 50px;
+    line-height: 50px;
+    
+}
+
+ul li{
+    float: right;
+    /* border: 1px solid #000; */
+    width: 150px;
+    margin-left: 5px;
+    text-align: center;
+    /* background: radial-gradient(pink, yellow); */
+    /* background: linear-gradient(rgba(173, 173, 168, 0.8), rgba(117, 113, 110, 0.6)); */
+    /* background: linear-gradient(cyan, purple); */
+    background: rgb(209, 32, 209);
+    border-radius: 5px;
+    color: yellow;
+}
+
+ul li ul{
+    border-width: 0;
+    margin-left: -24px;
+    display: none;
+}
+
+ul li ul li{
+    margin-bottom: 5px;
+}
+
+ul li:hover ul{
+    display: block;
+}
+
+ul li:hover{
+    background: rgb(235, 165, 235);
+}
+
+ul li ul li:hover{
+    transform: rotate(-25deg);
+    background: rgb(76, 10, 67);
+}
