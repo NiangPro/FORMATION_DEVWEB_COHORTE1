@@ -10,14 +10,19 @@
     /* background-attachment: fixed; */
     position: relative;
     overflow-x: hidden;
+    
 }
 .plan p{
     width: 1000px;
+    z-index: 100;
+    /* background: rgb(74, 8, 8); */
 }
 .plan h1{
     position: absolute;
     bottom: 25px;
     left: 50px;
+    z-index: 0;
+    /* background: rgb(20, 139, 47); */
 }
 ul{
     list-style-type: none;

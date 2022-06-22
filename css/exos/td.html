@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mise en forme css</title>
+    <link rel="stylesheet" href="td.css">
+</head>
+<body>
+    <header>
+        <h1>Pique-nique de fin d'année</h1>
+        <p>Inscription</p>
+    </header>
+    <form action="">
+        <fieldset>
+            <legend>Je m'identifie</legend>
+            <div class="first-form">
+                <div class="left-part">
+                    <label for="">Mon prénom:</label>
+                    <input type="text">
+                    <label for="">Ma classe</label>
+                    <select name="" id="">
+                        <option value=""></option>
+                    </select>
+                    <label for="">Mon E-mail</label>
+                    <input type="email">
+                    <label for="">Mon mot de passe:</label>
+                    <input type="password">
+                </div>
+                <div class="right-part">
+                    <img src="../../images/formulaire.png" alt="">
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>J'informe</legend>
+            <div class="second-form">
+                <label for="">Mes disponibilités:</label>
+                <div class="custom">
+                    <span class="form-group">           
+                        <input type="checkbox">Lundi 10 juin
+                    </span>
+                    <span class="form-group">           
+                        <input type="checkbox">Mardi 11 juin
+                    </span>
+                    <span class="form-group">           
+                        <input type="checkbox">Mercredi 12 juin
+                    </span>
+                </div>
+                <label for="" >J'apporterai...</label>
+                <div class="custom">
+                    <div class="form-group">           
+                        <input type="radio" >Une entrée
+                    </div>
+                    <div class="form-group">           
+                        <input type="radio">Un plat
+                    </div>
+                    <div class="form-group">           
+                        <input type="radio">Un desert
+                    </div>
+                </div>
+            </div>
+                <label for="" class="my-label">Je laisse un message (facultatif):</label><br>
+                <textarea name="" id="" rows="4" cols="115" placeholder="Maximum 160 caractères" maxlength="160"></textarea>
+
+        </fieldset>
+
+        <div class="btn-group">
+            <button type="submit">JE M'INSCRIS</button>
+            <button type="reset">JE REINITIALISE LE FORMULAIRE</button>
+        </div>
+    </form>
+</body>
+</html>

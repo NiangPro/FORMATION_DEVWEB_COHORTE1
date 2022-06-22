@@ -1,0 +1,113 @@
+body{
+    background: rgb(121, 171, 13);
+}
+
+header{
+    margin: auto;
+    width: 1000px;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    background: rgb(211, 249, 128);
+}
+
+p{
+    font-size: 24px;
+    opacity: .6;
+}
+
+header h1{
+    text-shadow: 1px 0px 0px #fff;
+}
+
+fieldset{
+    width: 950px;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 40px;
+    border-color: white;
+    font-size: 24px;
+}
+
+.first-form{
+    position: relative;
+    height: 250px;
+    margin-top: 30px;
+}
+.left-part{
+    position: absolute;
+    left: 20px;
+    width: 1000px;
+    display: grid;
+    grid-template-columns: 200px 300px;
+    text-align: right;
+}
+
+.left-part input{
+    margin-bottom: 20px;
+    height: 30px;
+margin-left: 20px;
+}
+
+.left-part select{
+    margin-bottom: 20px;
+    height: 40px;
+    margin-left: 20px;
+}
+
+
+.right-part{
+    width: 350px;
+    position: absolute; 
+     right: 0;
+    display: inline;
+    top: -20px;
+    margin-right: -20px;
+}
+
+
+.second-form{
+    margin-top: 30px;
+    padding-left: 30px;
+    display: grid;
+    grid-template-columns: 230px 700px;
+}
+
+
+
+.custom{
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    margin-bottom: 20px;
+}
+.my-label{
+    margin-left: 30px;
+}
+
+.btn-group{
+    margin: auto;
+    width: 1000px;
+    margin-top: 30px;
+}
+
+button{
+    background: #000;
+    color: white;
+    border-radius: 25px;
+    padding: 15px;
+    border: none;
+}
+
+textarea{
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 800px;
+    margin-left: 30px;
+    height: 100px;
+}
+
+button[type="submit"]{
+    background: rgb(47, 47, 47);
+    margin-left: 100px;
+    margin-right: 500px;
+}
