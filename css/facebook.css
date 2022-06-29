@@ -1,0 +1,93 @@
+*{
+
+    text-decoration: none;
+}
+body{
+    background: radial-gradient(cyan, red);
+    font-family: verdana;
+}
+main{
+    /* border: 1px solid #000; */
+    width: 800px;
+    height: 500px;
+    position: relative;
+    margin: auto;
+    transform: translateY(25%);
+}
+form{
+    /* border: 1px solid #000; */
+    background-image: url(../images/bg1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 300px;
+    position: absolute;
+    right: 30px;
+    top: 50px;
+    padding: 10px;
+    text-align: center;
+    animation: animBg 10s ease-in infinite;
+
+}
+
+@keyframes animBg {
+    20%{
+        background-image: url(../images/bg2.jpg);
+    }
+
+    40%{
+        background-image: url(../images/img2.jpg);
+    }
+
+    60%{
+        background-image: url(../images/img3.jpg);
+    }
+}
+input[type=text],input[type=password], input[type=submit]{
+    width: 350px;
+    height: 35px;
+    margin-top: 20px;
+    border-radius: 5px;
+    /* border: 0px; */
+    margin-left: 20px;
+    border: 1px solid #000;
+    padding: 5px;
+    outline: none;
+    border-color: grey;
+    border-style: solid;
+}
+input[type=submit]{
+    background-color: rgb(5, 5, 216);
+    color: white;
+    margin-bottom: 10px;
+    border: none;
+}
+.new-account{
+    width: 250px;
+    height: 50px;
+    background-color: rgb(4, 92, 4);
+    color: white;
+    text-align: center;
+    border: 0px;
+    font-weight: bolder;
+    font-size: 18px;
+    position: absolute;
+    bottom: 20px;
+    border-radius: 10px;
+    padding: 5px;
+    right: 20%;
+    line-height: 50px;
+}
+
+.coma{
+    top: 100px;
+    left: 50px;
+    font-family: verdana;
+    position: absolute;
+    width: 300px;
+
+}
+h1{
+    color: blue;
+
+}
