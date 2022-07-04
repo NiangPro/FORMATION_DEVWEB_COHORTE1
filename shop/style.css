@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    text-decoration: none;
+    /* overflow: hidden; */
+}
+header{
+    width: 99.7vw;
+    height: 12vh;
+    position: fixed;
+    top: 0;
+    z-index: 20;
+}
+
+.logo{
+    position: absolute;
+    left: 10%;
+    height: inherit;
+    z-index: 5;
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+
+.navbar-top{
+    border: 1px solid #000;
+    width: inherit;
+    height: 40%;
+    position: absolute;
+    top: 0;
+    line-height: 40px;
+    background: #000;
+}
+
+.navbar-top p{
+    position: absolute;
+    left: 20%;
+    font-size: 14px;
+    color: rgb(230, 229, 229);
+}
+
+.navbar-top ul{
+    position: absolute;
+    right: 5%;
+    display: flex;
+    column-gap: 10px;
+    font-size: 14px;
+    list-style-type: none;
+}
+
+.active{
+    color: white !important;
+}
+
+.navbar-top li a{
+    color: rgb(198, 197, 197);
+}
+
+.navbar-bottom{
+    width: inherit;
+    height: 60%;
+    position: absolute;
+    bottom: 0;
+    line-height: 60px;
+    background: white;
+}
+
+.navbar-bottom ul{
+    display: flex;
+    position: absolute;
+    left: 20%;
+    width: 50%;
+    height: 100%;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.navbar-bottom .icons{
+    position: absolute;
+    right: 0;
+    width: 15%;
+    height: 100%;
+}
+
+.navbar-bottom li{
+    border-right: 1px solid #000;
+    width: 150px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.navbar-bottom li a{
+    text-align: center;
+    color: black;
+}
+.search, .cart{
+    width: 40px;
+    position: absolute;
+    top: 10%;
+    /* border-left: 1px solid rgb(96, 96, 96); */
+}
+
+.cart{
+    left: 30%;
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;
+}
+
+.icons span{
+    background: orange;
+    padding: 5px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    line-height: 10px;
+    left: 40%;
+    color: white;
+}
+.search input{
+    position: absolute;
+    bottom: -30px;
+    right: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    z-index: 10;
+    visibility: hidden;
+}
+.search img{
+    cursor: pointer;
+    border-left: 1px solid #000;
+}
+
+.search img:focus .searchinput{
+    visibility: visible;
+}
+.slider{
+    margin-top: 100px;
+    height: 600px;
+    border: 1px solid #000;
+    width: 100vw;
+    background-image: linear-gradient(rgba(29, 28, 28, 0.3), rgba(36, 35, 35, 0.3)), url(images/shoesbg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    position: relative;
+    text-align: center;
+    color: white;
+    background-attachment: fixed;
+}
+
+.puma{
+    margin-top: 40px;
+    margin-bottom: 80px;
+    width: 100px;
+    height: 60px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid orange;
+}
+
+.slider h1{
+  font-size: 50px;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+}
+
+.slider button{
+    margin-top: 50px;
+    background: transparent;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    border-color: white;
+    position: relative;
+    width: 200px;
+    cursor: pointer;
+}
+
+button img{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 3px;
+    right: 0;
+}
+.slider ul {
+    display: flex;
+    justify-content: center;
+    column-gap: 40px;
+    margin-top: 40px;
+}
+.slider ul li{
+   font-size: 40px;
+    color: rgb(114, 113, 113);
+}
+
+.cards{
+    width: 99.7vw;
+    position: relative;
+    border: 1px solid #000;
+    height: 400px;
+}
+
+.card{
+    background-image: url(images/montres.jpg);
+    background-size: contain;
+    width: 450px;
+    height: 350px;
+    border: 1px solid #000;
+    position: absolute;
+    left: 20%;
+    top: -10%;
+}
+.carre{
+    border: 2px solid #fff;
+    width: 360px;
+    height: 250px;
+    position: absolute;
+    top: 20px;
+    left: 50px;
+}
+
+.carre2{
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    width: 80px;
+    height: 130px;
+    border-top: 2px solid rgb(208, 98, 61);
+    border-left: 2px solid rgb(208, 98, 61);
+    z-index: 5;
+}
+
+.description{
+    position: absolute;
+    top: 8px;
+    left: 48px;
+    z-index: 10;
+    color: white;
+    font-size: 30px;
+}
+.cadre1{
+background-image:url(images/shoes.jpg) ;
+width: 450px;
+height: 350px;
+border: 1px solid  #000;
+position: absolute;
+right: 17.5%;
+top: -10%;
+
+}
+.carre3{
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    width: 160px;
+    height: 130px;
+    border-top: 2px solid #dbdbdb;
+    border-left: 2px solid #dbdbdb;
+    z-index: 5;
+}
+.description{
+    position: absolute;
+    top: 8px;
+    left: 48px;
+    z-index: 10;
+    color: white;
+    font-size: 30px;
+}
+ .card a{
+    text-decoration: none;
+    color: white;
+}
+ .card ul{
+    list-style-type: none;
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    column-gap: 20px;
+
+}
+
+
+
