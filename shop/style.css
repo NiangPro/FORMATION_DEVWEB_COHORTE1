@@ -256,7 +256,8 @@ top: -10%;
     left: 50px;
     width: 160px;
     height: 130px;
-    border-top: 2px solid #dbdbdb;
+    /* border: 1px solid #000; */
+     border-top: 2px solid #dbdbdb;
     border-left: 2px solid #dbdbdb;
     z-index: 5;
 }
