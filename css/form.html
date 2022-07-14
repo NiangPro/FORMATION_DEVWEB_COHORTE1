@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire personnalise</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <main>
+        <form action="">
+            <div class="form-header">
+                <img src="assets/profil.png" alt="">
+            </div>
+            <h1>CREATE ACCOUNT</h1>
+            <div class="form-body">
+                <input type="text"  placeholder="YOUR NAME" id="nom">
+                <input type="email" placeholder="EMAIL">
+                <input type="password" placeholder="PASSWORD">
+                <input type="tel" placeholder="PHONE">
+            </div>
+            <button type="submit" onclick="envoyer()">SIGN UP</button>
+        </form>
+        <div class="footer">
+            designed by <img src="assets/freepik.png" width="30" height="30" alt=""> freepik
+        </div>
+    </main>
+
+    <script>
+        function envoyer(){
+            var nom = document.getElementById('nom');
+            alert(nom.value)
+            window.preventDefault();
+        }
+    </script>
+</body>
+</html>
