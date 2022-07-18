@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les bases de javascript</title>
+    
+</head>
+<body>
+    <p>Je suis un paragraphe</p>
+    <script>
+        var _entier; // declaration
+        _entier =  28; // assignation
+
+        var entier = 23;
+        var chaine = '23';
+        var chaine2 = 'c\'est une chaine de caracteres';
+        var bool = false;
+
+        var entier2 = parseInt(chaine);
+        //parseInt permet de convertir une chaine de caracteres en un entier
+        // alert(typeof(bool));
+        // alert(typeof(entier2));
+
+        var age = 15, nom = "Niang", prenom = "bassirou"; // definition
+        // alert(prenom +" a " +age+ " ans");
+         // affichage
+        // + permet de concatener 
+        // les operations
+        // + addition
+        // - soustraction
+        // * multiplication
+        // / division
+        // % --> modulo (le reste de la division)
+        var addition = entier2+ entier;
+        var sous = entier2 - 20;
+        var multi = entier2 *2;
+        var division = entier / 4;
+        var reste = entier % 4;
+        var produit = 2+5*3-4;
+        // alert(produit);
+        // prompt permet d'interagir avec l'utilisateur
+    //    var datenais = parseInt(prompt("Entrer votre age"));
+    //     alert(datenais);
+    //    alert("Vous avez "+age+" ans");
+
+    // les operateurs de comparaisons
+
+    // ==
+    // === 
+    // >
+    // <
+    // >=
+    // <=
+    // !=
+    // !==
+
+    // les contraires de operateurs de comparaisons
+    // > != <=
+    // < != >=
+    // = !=
+
+    // les operateurs logiques
+
+    // && Et
+    // || OU
+    // ! NON
+
+    var note = 9;
+
+    var resultat = age >= 18 || note >= 10;
+        // alert(age >= 18);
+    if(age >= 18){
+            alert("Vous etes majeur");
+    }else if(age < 18){
+        alert("Vous etes mineur")
+    }
+    </script>
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>
