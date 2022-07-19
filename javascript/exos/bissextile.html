@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bissextile</title>
+</head>
+<body>
+    <script>
+        // declaration
+        var message;
+        //declaration et saisi
+        var annee = parseInt(prompt("Veuillez entrer une annee"));
+        // traitements
+        // si l'annee est divisible par 4
+        if(annee%4==0){
+            // ce sont les exceptions
+            if(annee == 1700 || annee == 1800 || annee==1900|| annee == 2100 || annee ==2200 || annee ==2300 || annee==2500){
+                message = annee + " n'est pas bissextile";
+            }else{
+                // les annees bissextiles
+                message = annee + " est bissextile";
+            }
+        }else{
+            message = annee + " n'est pas bissextile";
+        }
+        // l'affichage ou le resultat
+        alert(message);
+    </script>
+</body>
+</html>
