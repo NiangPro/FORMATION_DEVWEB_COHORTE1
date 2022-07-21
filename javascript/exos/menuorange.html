@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Orange</title>
+</head>
+<body>
+    
+
+    <script>
+        // Pour ecrire au niveau de la console
+        // console.log(`MENU Orange
+        // 1 - Solde de mes comptes
+        // 2 - Transfert d'argent
+        // 2 - Paiement de facture
+        // `);
+        var valeur,sous_valeur, choix = parseInt(prompt(`MENU Orange
+        1 - Solde de mes comptes
+        2 - Transfert d'argent
+        3 - Paiement de facture
+        Veuillez faire votre choix
+        `));
+
+        switch (choix) {
+            case 1:
+                valeur =    parseInt(prompt(`Sous Menu
+                    1 - Solde Orange Money
+                    2 - Mon salaire
+                    `))
+                switch (valeur) {
+                    case 1:
+                        alert("Votre solde est de 2000 FCFA")                        
+                        break;
+                    case 2: 
+                        alert("Votre salaire est de 150 000 FCFA");
+                        break;
+                    default:
+                        alert("Choix indisponible");
+                        break;
+                }
+                break;
+            case 2: 
+                alert("Mode construction pour le transfert d'argent");
+                break;
+            case 3: 
+                valeur = parseInt(prompt(`Paiement de factuere
+                1 - Sonatel
+                2 - Orange teranga
+                veuillez votre choix :`));
+                switch (valeur) {
+                    case 1:
+                        sous_valeur = parseInt(prompt(`Sonatel
+                        1 - Payer ma facture fixe
+                        2 - Payer mes frais d'acces
+                        veuillez faire votre choix :`))
+                        switch (sous_valeur) {
+                            case 1:
+                                alert("Paiement facture avec succes");
+                                break;
+                            case 2: 
+                                alert("Paiement frais d'acces avec succes");                                
+                                break;
+                        
+                            default:
+                                alert("Choix indisponible");
+                                break;
+                        }
+                        
+                        break;
+                    case 2: 
+                        alert("Orange teranga");
+                    default:
+                        alert("Choix indisponible");
+                        break;
+                }
+                break;
+            default:
+                alert("Choix indisponible");
+                break;
+        }
+    </script>
+</body>
+</html>

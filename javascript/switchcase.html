@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selon - cas</title>
+</head>
+<body>
+    <h1>Menu</h1>
+    <ol>
+        <li>Maffee</li>
+        <li>Domada</li>
+        <li>Thiebou djeun</li>
+    </ol>
+
+    <h1>Creation compte bancaire</h1>
+    <ol>
+        <li>client</li>
+            <ol>
+                <li>Nouveau</li>
+                <li>Existant</li>
+            </ol>
+        <li>Epargne</li>
+        <li>Caisse</li>
+        <li>Emprunt</li>
+        <ol>
+            <li>Par wave</li>
+            <li>Par orange  money</li>
+        </ol>
+    </ol>
+
+    <script>
+        // var choix = parseInt(prompt("Veuillez choisir"));
+        // switch (choix) {
+        //     case 1:
+        //             alert("Vous avez choisi maffee");
+        //         break;
+        //     case 2:
+        //             alert("Vous avez choisi domada");
+        //         break;
+        //     case 3:
+        //             alert("Vous avez choisi le thiebou djeun");
+        //             break;
+        //     case 4:
+        //         alert("Ce plat ne fait dans notre menu");
+        //     default:
+        //         alert("Choix indisponible");
+        //         break;
+        // }
+            
+        var client = parseInt(prompt(`Veuiller faire votre choix
+                    1- Orange`));
+        switch (client) {
+            case 1:
+                    var choix_client = parseInt(prompt("Choisir 1 pour nouveau 2 pour existant"));
+                    switch (choix_client) {
+                        case 1:
+                                alert("Vous vouliez creer un nouveau client");
+                        case 2: 
+                                alert("Vouliez creer un client existant");
+                            break;
+                    
+                        default:
+                            alert("Erreur de creation d'un compte client");
+                            break;
+                    }
+                break;
+            case 2: 
+ alert("Vous vouliez creer un compte epargne");
+            case 4: 
+                    var choix_emprunt = parseInt(prompt("Veuillez choisir le moyen de transfert"));
+                    if(choix_emprunt == 1){
+                        alert("Tu as choisi WAVE");
+                    }else if(choix_emprunt == 2){
+                        alert("Tu as choisi Orange Money");
+                    }else{
+                        alert("Moyen de transfert indisponible");
+                    }
+                    break;
+            default:
+                alert("Erreur de creation");
+                break;
+        }
+        
+    </script>
+</body>
+</html>

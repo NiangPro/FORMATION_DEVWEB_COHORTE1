@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compte bancaire</title>
+</head>
+<body>
+    <script>
+       var valeur,val, choix =  parseInt(prompt(`******** BIENVENUE A SUNUKHALISS ******
+
+        1 - COMPTES
+        2 - OPERATIONS
+        3 - QUITER
+        `));
+
+        switch (choix) {
+            case 1:
+                    valeur = prompt(`Compte
+                    a - Creation
+                    b - Solde
+                    `)
+                    switch (valeur) {
+                        case "a":
+                                val = prompt(`Creation de compte
+                                1 - Epargne
+                                2 - Credit`)
+                                switch (val) {
+                                    case "1":
+                                        alert("Compte epargne cree avec succes");
+                                        break;
+                                    case "2": 
+                                        alert("Compte credit cree avec succes");
+                                        break;
+                                    default:
+                                        alert("Choix indisponible");
+                                        break;
+                                }
+                            break;
+                        case "b": 
+                                alert("Votre solde est : 190 000 000 FCFA");
+                                break;
+                        default:
+                            alert("Choix indisponible");
+                            break;
+                    }
+                break;
+            
+            case 2: 
+                    valeur = prompt(`Operations
+                    a - DEPOT
+                    b - Retrait 
+                    c - Transfert`);
+                    switch (valeur) {
+                        case "a":
+                            alert("Depot avec succes");
+                            break;
+                        case "b": 
+                            alert("Retrait avec succes");
+                            break;
+                        case "c": 
+                            alert("Transfert avec succes");
+                        default:
+                            alert("Choix indisponible");
+                            break;
+                    }
+                break;
+            case 3:
+                if(confirm("Etes-vous sur de vouloir quitter?")){
+                    alert("Au revoir");
+                }else{
+                    alert("Erreur");
+                }
+            break;
+            default:
+                alert("Choix indisponible");
+                break;
+        }
+    </script>
+</body>
+</html>
