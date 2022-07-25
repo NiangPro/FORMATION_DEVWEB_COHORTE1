@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Permutation et comparaison</title>
+</head>
+<body>
+    <script>
+
+       var valeur1 = parseInt(prompt("Entrer la premiere valeur:"));
+       var valeur2 = parseInt(prompt("Entrer la deuxieme valeur :"));
+
+       if (valeur1 > valeur2) {
+        document.write(`${valeur1} > ${valeur2}`);
+        }else if(valeur1<valeur2){
+            document.write(`${valeur2} > ${valeur1}`);
+
+        }else{
+        document.write(`${valeur1} = ${valeur2}`);
+
+        }
+
+        document.write(`<br>Avant permutation <br> a = ${valeur1} et b = ${valeur2}`);
+        // Traitement de la permutation 
+        var tmp = valeur2;
+        valeur2 = valeur1;
+        valeur1 = tmp;
+        document.write(`<br>Apres permutation <br> a = ${valeur1} et b = ${valeur2}`);
+
+        // condition ? valeur si vrai : valeur si faux;
+        var age = 10;
+
+        age >= 18 ? alert("Vous etes majeur") : alert("Vous etes mineur");
+
+        // if(age >= 18){
+        //     alert("Vous etes majeur");
+        // }else{
+        //     alert("VOus etes mineur");
+        // }
+    </script>
+</body>
+</html>
