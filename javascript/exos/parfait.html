@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombre parfait</title>
+</head>
+<body>
+    <script>
+    // alert(~~(12/10));  division entier
+    console.log("Ici c'est la console");
+    // saisi de l'entier
+    var valeur = parseInt(prompt("Entrer une valeur"));
+    // la somme des diviseurs de l'entier saisi
+    var somme = 0;
+    for (var i = 1; i < valeur; i++) {
+        if(valeur%i == 0){
+            somme += i;
+        }      
+    }
+    // si la somme est egal a ce nombre
+    if(valeur == somme){
+        document.write(`${valeur} est parfait`);
+    }else{
+        document.write(`${valeur} n'est pas parfait`);
+    }
+    </script>
+</body>
+</html>

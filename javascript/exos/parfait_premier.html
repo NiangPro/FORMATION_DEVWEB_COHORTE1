@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombre parfait et nombre premier</title>
+</head>
+<body>
+    <script>
+        var cpt = 0, somme  = 0, indice =1;
+        var entier = parseInt(prompt("Entrer un entier "));
+        // control du saisi 
+        while(entier <= 0){
+            entier = parseInt(prompt("Veuillez entrer un entier positif"));
+        }
+
+        // le traitement de premier et parfait 
+        while(indice < entier){
+            if(entier % indice == 0){
+                cpt++;
+                somme += indice;
+            }
+
+            indice++;
+        }
+
+        if(cpt === 1){
+            document.write(entier + " est premier<br>");
+        }else{
+            document.write(entier + " n'est pas premier<br>");
+        }
+
+        if(somme == entier){
+            document.write(entier + " est parfait<br>");
+        }else{
+            document.write(entier + " n'est pas parfait<br>");
+        }
+
+    </script>
+</body>
+</html>

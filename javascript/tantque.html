@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boucles tant que et faire tant que</title>
+</head>
+<body>
+    <script>
+        var i=1,indice = 10, age;
+        do{
+            document.write(i+ " ");
+            i+=2;
+        }while(i<10);
+
+        age = parseInt(prompt("Entrer votre age"));
+        do{
+            if(age <= 0)
+                age = parseInt(prompt("L'age doit etre positif"));
+                
+        }while(age <= 0);
+
+        var entier = parseInt(prompt("entrer une valeur comprise entre 1 et 10"));
+        while (entier > 10 || entier <0) {
+            entier = parseInt(prompt("SVP! veuillez saisir une valeur comprise entre 1 et 10"));
+        }
+
+        document.write("<br>"+entier);
+    </script>
+</body>
+</html>
