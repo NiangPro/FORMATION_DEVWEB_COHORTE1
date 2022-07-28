@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les fonctions</title>
+</head>
+<body>
+    <script>
+        function sayHello(nom){
+            document.write("Bonjour "+ nom+"<br>");
+        }
+
+        function test(age){
+
+            // condition ? valeur si vrai : valeur si faux ;
+            age >= 18 ? document.write("Vous etes majeur") :   document.write("Vous etes mineur");
+            // if(age>=18)
+            //     document.write("Vous etes majeur");
+            // else
+            //     document.write("Vous etes mineur");
+        }
+
+        function sum(a , b){
+            document.write("la somme est de "+ (a+b)+"<br>");
+        }
+
+        function produit(a, b){
+            return a*b;
+        }
+
+        test(15);
+        sayHello("ALIOUNE");
+        sum(5, 6);
+        sum(10, 6);
+        sum(5, 20);
+        var resultat = produit(5,5);
+        document.write(resultat);
+    </script>
+</body>
+</html>

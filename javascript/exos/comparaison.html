@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparaison</title>
+</head>
+<body>
+    <script>
+        var entier1 = parseInt(prompt("Entrer la premiere valeur : "));
+        
+       while (!entier1) {
+         entier1 =  parseInt(prompt("SVP! Veuillez saisir un entier : "));
+       }
+        var entier2 = parseInt(prompt("Entrer la deuxieme valeur : "));
+        var entier3 = parseInt(prompt("Entrer la troisieme valeur : "));
+
+        var max, min, moy;
+
+        if(entier1 >= entier2){
+            if(entier1 <= entier3){
+                moy = entier1;
+                max = entier3;
+                min = entier2;
+            }else{
+                if(entier3 >= entier2){
+                    moy = entier3;
+                    max = entier1;
+                    min = entier2;
+                }else{
+                    max = entier1;
+                    moy = entier2;
+                    min = entier3;
+                }
+            }
+        }else{
+            if(entier3>= entier2){
+                max = entier3;
+                moy = entier2;
+                min = entier1
+            }else{
+                if(entier3>=entier1){
+                    min = entier1;
+                    moy = entier3;
+                    max = entier2;
+                }else{
+                    max = entier2;
+                    moy = entier1;
+                    min = entier3;
+                }
+            }
+        }
+
+        // if(entier1>= entier2 && entier2>= entier3){
+        //     max = entier1;
+        //     moy = entier2;
+        //     min = entier3;
+        // }else if(entier1>= entier2 && entier2<entier3 && entier3>=entier1){
+        //     max = entier3;
+        //     moy = entier1;
+        //     min = entier2;
+        // }else if(entier1>= entier2 && entier2<entier3 && entier3<entier1){
+        //     max = entier1;
+        //     moy = entier3;
+        //     min = entier2;
+        // }else if(entier2>entier1 && entier1>=entier3){
+        //     max = entier2;
+        //     moy = entier1;
+        //     min = entier3;
+        // }else if(entier1< entier2 && entier1<entier3 && entier2>=entier3){
+        //     max = entier2;
+        //     moy = entier3;
+        //     min = entier1;
+        // }else if(entier1< entier2 && entier1<entier3 && entier2<entier3){
+        //     max = entier3;
+        //     moy = entier2;
+        //     min = entier1;
+        // }
+
+        document.write(min + " <= "+moy+" <= "+max);
+    </script>
+</body>
+</html>
