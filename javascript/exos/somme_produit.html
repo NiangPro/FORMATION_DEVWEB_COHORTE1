@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somme produit</title>
+</head>
+<body>
+    <script>
+        //variable globale
+        var nbre = 3;
+        document.write(Math.sqrt(16));
+        function somme(val1, val2)
+        {
+            //variable locale
+            let som = val1 + val2;
+            let produit = val1*val2;
+           if(som > 0)
+                document.write("La somme est positive: " +som);
+            else
+                document.write("La somme est  negative ou nulle: "+som);
+            if(produit > 0)
+                document.write("<br>Le produit est positif: " +produit);
+            else
+                document.write("<br>Le produit est negatif ou nul: " +produit);
+        }
+
+        function nombre_paires(M, N)
+        {
+            if(M < N){
+                document.write("<br>Les nombres pairs entre "+M+' et '+ N+ ' sont : ');
+                for(var i = M; i<N; i++){
+                    if(i % 2 == 0){
+                        document.write(i+" - ");
+                    }
+                }
+            }else{
+                document.write("Impossible");
+            }
+        }
+
+        somme(-5, 0);
+
+        nombre_paires(30, 40);
+
+    </script>
+</body>
+</html>

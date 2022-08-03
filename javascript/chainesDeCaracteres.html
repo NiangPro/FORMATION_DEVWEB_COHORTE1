@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les chaines de caracteres</title>
+</head>
+<body>
+    <script>
+        var chaine = "Ma premiere chaine de caracteres";
+        var prenom = " Bass";
+        var nom = "Niang";
+
+
+        // document.write(chaine.length); la taille
+       /* document.write(chaine.charAt(1));  selectionner une caractere
+        document.write(chaine[0]); */
+        /*document.write(prenom.concat(" Niang"));  concatener ou lier
+        document.write(prenom+" Niang 2"); */
+        document.write(prenom.startsWith("b"));
+        document.write(nom.endsWith("ng"));
+        var newvariable = prenom.padStart(10, " ");
+        var chaine3 = chaine.padEnd(35, ".");
+        document.write(newvariable.length);
+        document.write(chaine3);
+        
+        var chaine4 = prenom.padEnd(10, " ");
+        chaine4 = chaine4.trim();
+        document.write(chaine4.length);
+        document.write(chaine4.repeat(5));
+        document.write(chaine4.replaceAll("s", "r"));
+        document.write(chaine4.toUpperCase());
+        document.write(chaine4.toLocaleUpperCase());
+
+
+
+        for(let i = 0; i<prenom.length; i++){
+            document.write(prenom[i]+"<br>");
+        }
+
+        
+        
+    </script>
+</body>
+</html>

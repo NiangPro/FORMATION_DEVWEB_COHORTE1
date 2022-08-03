@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equation</title>
+</head>
+<body>
+    <script>
+        function equation(a, b, c)
+        {
+            let x, x1, x2, racine_delta;
+            let delta = Math.pow(b, 2) - 4*a*c;
+
+            document.write(a+"x<sup>2</sup> + "+b+"x + "+c+" = 0 <br>")
+            
+            if(delta > 0){
+            racine_delta = Math.sqrt(delta);
+                x1 = (-b-racine_delta)/(2*a);
+                x2 = (-b+racine_delta)/(2*a);
+                document.write("S = {"+x1+" ; "+x2+"}");
+            }else if(delta < 0){
+                document.write("S = {Ø}");
+            }else{
+                x = -b/(2*a);
+                document.write("S = {"+x+"}");
+            }
+        }
+
+        equation(-1, 2, -2);
+    </script>
+</body>
+</html>
