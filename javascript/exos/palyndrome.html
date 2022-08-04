@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palyndrome</title>
+</head>
+<body>
+    <script>
+
+        var ch = "Ma chaine";
+
+        // document.write(ch.length);
+        // document.write(ch[0]+ " ou "+ch.charAt(ch.length-1));
+        
+        function palyndrome(chaine)
+        {
+            let chaine_inverse = "";
+
+            //inversion de la chaine de caracteres
+            for (let i = chaine.length - 1; i >= 0; i--) {
+                chaine_inverse += chaine.charAt(i);
+                document.write("position "+i+" -->"+chaine_inverse+"<br>");
+            }
+            if(chaine === chaine_inverse){
+                document.write(chaine + " est un palyndrome");
+            }else{
+                document.write(chaine + " n'est pas palyndrome");
+            }
+        }
+
+        palyndrome("modou");
+    </script>
+</body>
+</html>

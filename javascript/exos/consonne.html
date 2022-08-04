@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le nombre de consonnes</title>
+</head>
+<body>
+    <script>
+        let nombreDeConsonnes = function(chaine)
+        {
+            let compteur = 0;
+            let chaine2 = chaine.toLowerCase();
+            for(let i = 0; i< chaine2.length; i++)
+            {
+                if(chaine2[i] != 'a' && chaine2[i] != " " && chaine2[i] != "e" && chaine2[i] != "i" && chaine2[i] != "u" && chaine2[i] != "o" && chaine2[i] != "y"){
+                    compteur++;
+                }
+            }
+
+            document.write(chaine + " --> comporte "+compteur+" consonne(s)");
+        }
+
+        // la declaration ou la creation de la fonction nombreVoyellesEtConsonnes
+        let  nombreVoyellesEtConsonnes = ()=>
+        {
+            //declaration des variables locales
+            let cptVoyelle = 0, cptConsonne = 0;
+            // saisi
+            let chaine = prompt("Entrer une chaine de caracteres");
+            // mettre en minuscule
+            let chaine2 = chaine.toLowerCase();
+            // parcours de la chaine de caracteres
+            for(let i = 0; i< chaine2.length; i++)
+            {
+                //compter le nombre de consonnes
+                if(chaine2[i] != 'a' && chaine2[i] != 'e' && chaine2[i] != 'o' && chaine2[i] != 'i' && chaine2[i] != 'u' && chaine2[i] != 'y'&& chaine2[i] != ' '){
+                    cptConsonne++;
+                }else if(chaine2[i] != ' '){
+                    //compter le nombre de  voyelles
+                    cptVoyelle++;
+                }
+            }
+            // l'affichage
+            document.write(chaine + " comporte : <br> "+cptConsonne+" consonnes et "+cptVoyelle+" voyelles");
+        }
+
+        function somme(a, b){
+            return parseInt(a+b);
+        }
+
+        nombreDeConsonnes("fatou");
+        nombreVoyellesEtConsonnes();
+
+        // let resultat = somme(8, 9);
+
+        document.write(somme(8, 9));
+    </script>
+</body>
+</html>
