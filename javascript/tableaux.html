@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les tableaux</title>
+</head>
+<body>
+    <h1>Initiation des tableuax</h1>
+    <script>
+        // Declarations de tableau unidimensionnel
+        let tab1 = ["fatou", "lika", "bouba"];
+        let tab2 = new Array(12, -5, 45, -23, 30);
+        let tab3 = Array.of(13, 67 ,90);
+
+        //declaration d'un objet
+        let obj = {0: "Lika", 1: "MODOU"};
+        let person = {nom: "Ndiaye", prenom: "MODOU", age:34};
+
+        // let tab4 = Array.from(person);
+        // declaration de tableau multidimensionnel
+        let tab5 = [
+            [3, -7, 5, 4, 56, 67], 
+            [6, 10, 30, -20],
+            [100, -2, 7, 50]
+        ];
+
+
+        // Parcours
+        let chaine = tab2[0];
+        console.log(tab1.at(1));
+        console.log(tab2[1]);
+
+        // affichage des tableaux
+        /*for(let i = 0; i< tab1.length; ++i){
+            document.write("position "+(i+1)+" a comme valeur -->"+tab1[i]+"<br>");
+        }
+
+        tab1.forEach((value, index)=>{
+            document.write(value+" ");
+        });*/
+
+        /*for(let ligne=0; ligne<tab5.length; ligne++){
+            for(let colonne=0; colonne < tab5[ligne].length; ++colonne){
+                document.write(tab5[ligne][colonne]+ " ");
+            }
+        }*/
+
+        // les transformations
+        chaine = tab1.join("_");
+
+        document.write(chaine);
+
+        let tab6 = chaine.split("ou");
+
+        // Ajout d'elements
+        // tab1.push("BAssiou", "juldy");
+        tab1.unshift("BAssiou", "juldy");
+
+        // les suppressions
+        // let element_deleted = tab1.pop();
+        let element_deleted = tab1.shift();
+
+        //  inversion
+        // console.log(tab1.reverse());
+
+        // tri
+        console.log(tab2.sort().reverse());
+
+        chaine = "bassirou";
+        // extraction
+        // console.log(chaine.substring(0 , 4));
+        // console.log(tab2.slice(2));
+
+        //replacer ou supprimer ou ajouter
+        tab1.splice(1, 0, "ABDOU") 
+        console.log(tab1);
+
+        //Recherche
+        let search = tab1.find(function(value, index){
+            return value.toLowerCase().startsWith("ab");
+        })
+
+        for(let i = 0; i <tab1.length; i++){
+            if(tab1[i].toLowerCase().endsWith("ka")){
+                search = tab1[i];
+            }
+        }
+
+        console.log(search);
+
+    </script>
+</body>
+</html>
