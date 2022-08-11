@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrice</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let matrice = [
+            [50 , -5, -10],
+            [-3, 10, -7],
+            [0, -15, 30]
+        ];
+        // for(let i = 0; i <matrice.length; i++){
+        //     console.log(matrice[i].sort((a, b) => a-b));
+        // }
+        
+        /*document.write(`<table border="1">`);
+        matrice.forEach(
+            (value, index) => {
+                document.write("<tr>");
+                    value.sort((a, b) => a -b).forEach(
+                    (val) => {
+                        document.write("<td>"+val + "</td>")
+                    }
+                    );
+                document.write("</tr>");
+            }
+        );
+        document.write(`</table>`);
+        */
+        function triTab(tab){
+            for (let colonne = 0; colonne < tab.length; colonne++) {
+                for(let k = colonne + 1; k < tab.length; ++k){
+                    if(tab[colonne] > tab[k]){
+                        let tmp = tab[colonne];
+                        tab[colonne] = tab[k];
+                        tab[k] = tmp;
+                    }
+                }            
+            }
+
+            return tab;
+        }
+        
+       for (let ligne = 0; ligne < matrice.length; ligne++) {
+            matrice[ligne] = triTab(matrice[ligne]);
+       }
+
+       document.write(`<table border="1">`);
+        matrice.forEach(
+            (value, index) => {
+                document.write("<tr>");
+                    value.forEach(
+                    (val) => {
+                        document.write("<td>"+val + "</td>")
+                    }
+                    );
+                document.write("</tr>");
+            }
+        );
+        document.write(`</table>`);
+
+
+
+
+    </script>
+</body>
+</html>

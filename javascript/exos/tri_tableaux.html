@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tri d'un tableau</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let tab1 = [-10, 30, 400, -5, -15, 100, 80];
+        let stab = [];
+
+        console.log(tab1.sort((a, b) => a - b).reverse());
+
+        // ajout des nombres positifs
+        for(value of tab1){
+            if(value > 0){
+                stab.push(value);
+            }
+        }
+        //tri
+        for(let i=0; i<stab.length; i++){
+            for(let j=i+1; j<stab.length; j++){
+                if(stab[j] > stab[i]){
+                    let tmp = stab[j];
+                    stab[j] = stab[i];
+                    stab[i] = tmp;
+                }
+            }
+        }
+        // affichage
+        document.write(`
+                <table border="1">
+                    <tr>`);
+        stab.forEach((value) => {
+            document.write(`
+                    <td>
+                        ${value}
+                    </td>
+            `)
+        });
+        document.write(`
+                    </tr>
+                </table>
+            `)
+        // document.write(stab);
+    </script>
+</body>
+</html>
