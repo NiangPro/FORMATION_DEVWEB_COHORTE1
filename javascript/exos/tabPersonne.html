@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tableau de personnes</title>
+</head>
+<body>
+    <script>
+        let tabpersonnes = [
+            {prenom: "Ndour", nom: "Faye", localite: "Pikine", age:10},
+            {prenom: "Mamadou", nom: "Mbaye", localite: "Fouta", age:22},
+            {prenom: "Khadim", nom: "Gueye", localite: "Touba", age:23},
+            {prenom: "Fatou", nom: "Diop", localite: "Guediawaye", age:4},
+            {prenom: "Feury", nom: "Yole", localite: "Pikine", age:10},
+        ];
+
+        let stab = [];
+
+        tabpersonnes.forEach((p) => {
+            if(p.age >= 18 && p.localite.includes("a")){
+                stab.push(p);
+            }
+        });
+
+        document.write("La liste des personnes dont leur localite contient a <br>");
+       stab.forEach(p=>{
+            document.write(`
+                Prenom : ${p.prenom}<br>            
+                Nom : ${p.nom}<br>            
+                Localite : ${p.localite}<br>            
+                Age : ${p.age} ans<br><br><br>            
+            `);
+       })
+    </script>
+</body>
+</html>
