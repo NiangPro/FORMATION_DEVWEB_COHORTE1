@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo</title>
+    <style>
+        .myclasse{
+            font-family: algerian;
+            font-size: 32px;
+            font-style: italic;
+            background: green;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <p>Paragraphe 1</p>
+    <p class="col row">Paragraphe 2</p>
+    <a href="https://youtube.com">youtube</a>
+    <a href="https://facebook.com">facebook</a>
+    <a href="https://google.com">google</a>
+
+    <script>
+        let liens = document.getElementsByTagName("a");
+
+        let google = liens[2];//z = x
+        let fbk = liens[1];//y = z
+        let ytb = liens[0]; //x = y
+
+        let tmp1 = google.href;
+        google.href = ytb.href;
+        let tmp2 = fbk.href;
+        fbk.href = tmp1;
+        ytb.href = tmp2;
+
+        // document.getElementsByTagName("p")[1].className = "myclasse";
+        let p = document.getElementsByTagName("p")[1];
+
+        let classes ="";
+        for (let i = 0; i < p.classList.length; i++) {
+            classes += p.classList[i]+" ";            
+        }
+
+        classes += "myclasse";
+
+        p.className = classes;
+
+        console.log(classes);
+    </script>
+</body>
+</html>

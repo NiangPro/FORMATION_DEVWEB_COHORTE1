@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipuler le html avec javascript</title>
+    <style>
+        .custom{
+            font-size: 23px;
+            font-weight: bold;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titre">Mon titre <span id="span1">Javascript</span></h1>
+    <label class="mylabel">Prenom</label>
+    <div class="mylabel">Ma <strong>division</strong></div>
+    <div>Ma deuxieme division</div>
+    <a href="https://google.com" id="lien" title="Un lien de navigation">Surfer sur google</a>
+    <script>
+        // window.alert("bonjour");
+        // console.log(window.document);
+        // window.Location.load();
+
+        let id = document.getElementById("titre");
+        let classes = document.getElementsByClassName("mylabel");
+        let tags = document.getElementsByTagName("div");
+        // alert(typeof classes);
+
+        classes[1].className = "custom";
+        console.log(classes[0].className);
+
+        for(let i = 0 ; i < tags.length; i++){
+
+            console.log(tags[i].innerText);
+        }
+
+        let lien = document.getElementById("lien");
+
+        lien.setAttribute("href", "https://youtube.com");
+
+        console.log(lien.getAttribute("title"));
+    
+        // lien.href = "https://youtube.com";
+        lien.title = "Modification";
+        console.log(lien.title);
+
+        console.log(lien.href);
+
+        // alert(id.innerText);
+        // classes.forEach(classe => {
+        // });
+
+        // id.innerText = "Changement";
+        // alert(id.innerText);
+
+        let span = document.getElementById("span1");
+        for (let i = 0; i < id.childNodes.length; i++) {
+            console.log(id.childNodes[i]);
+            
+        }
+
+
+
+        // console.log(span.parentNode);
+        console.log(id.childNodes[1].innerText);
+    </script>
+</body>
+</html>
