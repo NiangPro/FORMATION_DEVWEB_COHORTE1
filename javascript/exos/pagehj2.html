@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creation d'element</title>
+</head>
+<body>
+    <div id="linkpart">
+        <br id="image">
+        <img src="../../image.PNG"  alt="" width="200" height="200"><br>
+    </div>
+    <script>
+        let lien = document.createElement("a");
+        lien.href = "https://google.com";
+        lien.title = "juste un lien";
+        let lienText = document.createTextNode("Surfez sur google");
+        lien.appendChild(lienText);
+        // document.getElementById("linkpart").appendChild(lien);
+        let img = document.getElementById("image");
+        document.getElementById("linkpart").insertBefore(lien, img);
+    </script>
+</body>
+</html>

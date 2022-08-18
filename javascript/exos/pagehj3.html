@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creation d'une liste non ordonnee</title>
+</head>
+<body>
+    <script>
+        // creation du contenu des elements
+        let tabItemText = [
+            document.createTextNode("Maths"),
+            document.createTextNode("Francais"),
+            document.createTextNode("Anglais"),
+            document.createTextNode("Algo"),
+            document.createTextNode("Langage c")
+        ];
+        // definition de ul
+        let ul = document.createElement("ol");
+        ul.start = "e";
+        // declaration de li
+        let li;
+
+        // Ajout des elements de la liste
+        for(let i = 0; i<tabItemText.length; i++){
+            // creation des li
+            li = document.createElement("li");
+            // ajout du contenu dans li
+            li.appendChild(tabItemText[i]);
+            if(i === 2){
+                li.id = "anglais";
+            }
+            // ajout de li dans ul
+            ul.appendChild(li);
+        }
+
+        // ajout de ul dans la balise body
+        document.body.appendChild(ul);
+
+        alert(document.getElementById("anglais").nextSibling.innerText);
+    </script>
+</body>
+</html>
