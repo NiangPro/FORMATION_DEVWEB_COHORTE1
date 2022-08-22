@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traitement d'un formulaire</title>
+</head>
+<body>
+    <form action="" id="form">
+        <label for="">Prenom : </label>
+        <input type="text" id="prenom"><br><br>
+        <label for="">Nom :</label>
+        <input type="text" id="nom"><br><br>
+        <label for="">Sexe :</label>
+        <input type="radio" value="Masculin" name="sexe" class="sexe">M &nbsp;
+        <input type="radio" value="Feminin" name="sexe" class="sexe">F <br><br>
+        <label for="">Pays: </label>
+        <select name="" id="pays">
+            <option value="Senegal">Senegal</option>
+            <option value="France">France</option>
+            <option value="Bresil">Bresil</option>
+            <option value="Belgique">Belgique</option>
+        </select><br> <br>
+        <button type="reset">Annuler</button>
+        <button type="submit">Envoyer</button>
+
+    </form>
+
+    <script>
+        let form = document.getElementById("form");
+        let prenom = document.getElementById("prenom");
+        let nom = document.getElementById("nom");
+        let sexe = document.getElementsByClassName("sexe");
+        let pays = document.getElementById("pays");
+        let new_sexe = "";
+        let new_country = pays.options[pays.selectedIndex].value;
+
+        form.addEventListener("submit", function(e){
+
+         
+            if(prenom.value === "" || nom.value === ""){
+                alert("Veuillez renseigner tous les champs");
+            }else{
+                let trouve = false;
+                for (let i = 0; i < sexe.length; i++) {
+                    if (sexe[i].checked) {
+                        trouve = true;
+                        new_sexe = sexe[i].value;
+                    }                    
+                }
+                if(trouve == true){
+                    if (new_country) {
+                        document.write(`
+                            Prenom : ${prenom.value}<br>
+                            Nom : ${nom.value}<br>
+                            Pays : ${new_country}<br>
+                            Sexe : ${new_sexe}<br>
+                        `);
+                    }else{
+                        alert("Veuillez renseigner tous les champs");
+
+                    }
+                    
+                }else{
+                    alert("Veuillez renseigner tous les champs");
+                }
+                
+            }
+
+                
+            e.preventDefault();
+
+        })
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les formulaires en javascript</title>
+</head>
+<body>
+    <h1>LES FORMULAIRES</h1>
+    <form  id="form">
+        <label for="">Prenom : </label>
+        <input type="text" id="prenom" value="Bassirou"><br>
+        <label for="">Langues</label>
+        <input type="checkbox" id="langue"  class="langues" value="French" checked>French <br>
+        <input type="checkbox" class="langues" value="English">English <br> 
+        <label for="">Sexe : </label>
+        <input type="radio" name="sexe" class="sexe" value="Homme">Homme &nbsp; &nbsp; 
+        <input type="radio" name="sexe" class="sexe" value="Femme">Femme  <br>
+        <label for="">Message</label><br>
+        <textarea  id="texa" cols="30" rows="10">Je suis un text long</textarea><br>
+        <label for="">Pays : </label>
+        <select name="" id="pays">
+            <option>Senegal</option>
+            <option>Mali</option>
+            <option>Guinee</option>
+        </select>
+
+            <option>Senegal</option>
+        <button type="submit">Envoyer</button> &nbsp;
+        <button type="reset">Annuler</button> 
+
+
+        <button id="send">sender</button>
+    </form>
+
+    <script>
+        let prenom = document.getElementById('prenom');
+        let send = document.getElementById("send");
+        let langue = document.getElementById("langue");
+        let langues = document.getElementsByClassName("langues");
+        let sexe = document.getElementsByClassName("sexe");
+        let texta = document.getElementById("texa");
+        let pays = document.getElementById("pays");
+        let form = document.getElementById("form");
+
+        prenom.addEventListener("change", function(e){
+           console.log(e.target.value); 
+        })
+        send.addEventListener("click", function (e) {
+            console.log(prenom.value);
+            prenom.value = "Samba rang";
+            // prenom.disabled = true;
+            prenom.readOnly = true;
+
+            // langue.checked = false;
+
+            // if (langue.checked) {
+                
+            //     console.log("Vous avez selectionne :" + langue.value);
+            // }else{
+            //     console.log("Veuillez selectionner  une langue");
+
+            // }
+
+            console.log("Vous avez selectionne : ");
+            for (let i = 0; i < langues.length; i++) {
+                if (langues[i].checked) {
+                    console.log(langues[i].value);
+                }
+            }
+
+            for (let i = 0; i < sexe.length; i++) {
+                if (sexe[i].checked) {
+                    console.log(sexe[i].value);
+                }
+                
+            }
+
+            console.log(pays.options[pays.selectedIndex].value);
+
+            
+            console.log(texta.value);
+            e.preventDefault();
+        })
+
+        pays.addEventListener("change", function(e){
+            console.log(pays.options[pays.selectedIndex].value);
+        })
+
+        form.addEventListener("reset", function(e){
+            console.log("Vous avez efface les donnees");
+        })
+
+        form.addEventListener("submit", function(e){
+            console.log("Traitement en cours ....");
+            document.write("Prenom : "+prenom.value);
+            e.preventDefault();
+        })
+
+
+    </script>
+</body>
+</html>
