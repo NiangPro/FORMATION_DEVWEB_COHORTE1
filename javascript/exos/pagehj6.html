@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion du temps</title>
+    <link rel="stylesheet" href="../../assets/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous"> -->
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    <div class="container-fluid bg-danger mt-3">
+         <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-success text-white text-center">
+                        le titre
+                    </div>
+                    <div class="card-body bg-warning">
+                        le corps du programmeur
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="../../images/profil.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">NiangPro</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-info">Go somewhere</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-3">
+                <form>
+                    <div class="form-group row">
+                      <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                      <div class="col-sm-10">
+                        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                      <div class="col-sm-10">
+                        <input type="password" class="form-control" required id="inputPassword">
+                      </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-success">Envoyer</button>
+                  </form>
+            </div>
+        </div>
+    </div>
+   
+
+
+    <div id="mytime"></div>
+    <div id="timer"></div>
+
+    <script>
+        let mytime = document.getElementById("mytime");
+        let timerSpace = document.getElementById("timer");
+        let mydate = new Date();
+
+        let timer = 10;
+
+        let idtimer = setInterval(()=>{
+            timer--;
+            timerSpace.innerText = "Le compte a rebours va s'arreter en moins de "+timer;
+            if(timer == 0){
+                timerSpace.innerText = "Le compte a rebours termine ";
+                clearInterval(idtimer)
+
+            }
+        }, 1000);
+
+
+        let myid = setInterval(() => {
+            mydate = new Date();
+            mydate.setHours(12);
+            if(mydate.getHours() == 13 && mydate.getMinutes() == 23){
+                clearInterval(myid);
+                mytime.innerText = "Compte a rebours termine"; 
+            }else{
+                mytime.innerText = mydate.getHours()+"h:"+mydate.getMinutes()+"mn:"+mydate.getSeconds()+"s";
+            }
+        }, 1000);
+
+    </script>
+
+    <script src="../../assets/jquery.js"></script>
+    <script src="../../assets/bootstrap.min.js"></script>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script> -->
+
+</body>
+</html>
