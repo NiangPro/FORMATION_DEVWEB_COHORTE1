@@ -83,11 +83,13 @@
         let clear = document.getElementById("clear");
         let nbre1 = '', nbre2 = '', trouve = false, opt= '', res = false;
 
+
         // Pour ajouter des valeurs
         function print(nbre){
+
             if (trouve) {
                 nbre2 += nbre;
-                affichage.innerText = nbre2; 
+                affichage.innerText = nbre1+opt+ nbre2; 
                 
                 console.log(nbre2);
             } else {
@@ -110,7 +112,7 @@
                     res = parseInt(nbre1) / parseInt(nbre2);
                 }
 
-                affichage.innerText = res;
+                affichage.innerText = nbre1+opt +nbre2 +" = "+res;
                 nbre1 = '';
                 nbre2 = '';
                 trouve = false;
@@ -123,22 +125,26 @@
         function operateur(optValue){
             trouve = true;
             opt = optValue;
-            affichage.innerText = "0";
+            affichage.innerText += opt;
         }
 
         // Pour effacer les valeurs
-        clear.addEventListener("click", ()=>{
+        clear.addEventListener("click", (e)=>{
             if (trouve) {
                 if(res){
                     affichage.innerText = '0';
                     res = false;
                 }else{
-                    if(nbre2.length === 0 || nbre2.length== 1){
+                    if(nbre2.length === 0){
+                        opt = '';
+                        trouve = false;
+                        affichage.innerText = nbre1;
+                    }else if(nbre2.length== 1){
                         nbre2 = '';
-                        affichage.innerText = "0";
+                        affichage.innerText = nbre1+opt;
                     }else{
                         nbre2 = nbre2.substr(0, nbre2.length -1);
-                        affichage.innerText = nbre2;
+                        affichage.innerText = nbre1+opt+nbre2;
                     }
                 }
                 
